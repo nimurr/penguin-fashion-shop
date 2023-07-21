@@ -16,6 +16,11 @@
         h2 {
             font-family: 'Bebas Neue', sans-serif;
         }
+        @media screen and (max-width:768px) {
+            .sm-flex-col{
+            flex-direction: column;
+        }
+        }
     </style>
 
 </head>
@@ -23,22 +28,25 @@
 <body>
     <header class="bg-[#FFFBF0] ">
 
-        <nav class="px-36 py-8 flex justify-between items-center">
+        <nav class="px-8 md:px-36 py-8 flex justify-between items-center">
             <div class="flex items-center cursor-pointer">
                 <img class="w-10" src="images/logo.png" alt="">
                 <h3 class="ml-2 text-xl font-semibold"><span class="text-[#A4BC46]">Penguin</span> Fashion</h3>
             </div>
-            <ul class="flex">
+            <ul class="md:flex hidden">
                 <li class="px-4 font-semibold cursor-pointer">Home</li>
                 <li class="px-4 font-semibold cursor-pointer">Product</li>
                 <li class="px-4 font-semibold cursor-pointer">About us</li>
                 <li class="px-4 font-semibold cursor-pointer">Contact us</li>
             </ul>
+            <ul class="text-4xl md:hidden">
+                <i class='bx bx-menu'></i>
+            </ul>
         </nav>
 
         <!-- hero Banner section  ------------------------------->
-        <div class="flex items-center px-36 justify-between ">
-            <div class="w-5/12">
+        <div class="flex sm-flex-col items-start md:items-center px-8 md:px-36 justify-between py-8">
+            <div class="w-12/12 md:w-5/12">
                 <h1 class="text-5xl font-bold text-[#363958]">
                     <span class="text-[#FABE4C]">Be the Penguins</span><br> of Winter
                 </h1>
@@ -56,9 +64,9 @@
 
 
         <!-- women jacket section  ----------------------------------->
-        <div class="px-36">
+        <div class="md:px-36 px-8">
             <h2 class="my-8 text-4xl text-[#363958]">W0Man Jacket</h2>
-            <div class="grid grid-cols-3 gap-16 my-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 my-10">
                 <div class="shadow-lg shadow-gray-200 rounded-2xl">
                     <div class="bg-gray-200 text-center flex items-center justify-center rounded-2xl mb-8">
                         <img class="w-10/12 p-8" src="images/jacket-3.png" alt="">
@@ -112,9 +120,9 @@
 
 
         <!-- men jacket section  -------------------------------------->
-        <div class="px-36 my-24">
+        <div class="md:px-36 px-8 my-24">
             <h2 class="my-8 text-4xl text-[#363958]">Man Jacket</h2>
-            <div class="grid grid-cols-3 gap-16 my-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 my-10">
                 <div class="shadow-lg shadow-gray-200 rounded-2xl">
                     <div class="bg-gray-200 text-center flex items-center justify-center rounded-2xl mb-8">
                         <img class="w-10/12 p-8" src="images/jacket-4.png" alt="">
@@ -168,8 +176,8 @@
 
 
 <!-- support section  ------------------------------------------------------->
-        <div class="grid grid-cols-2 items-center px-36 gap-4 my-24">
-            <div class="w-10/12">
+        <div class="grid md:grid-cols-2 grid-cols-1 items-center md:px-36 px-8 gap-4 my-24">
+            <div class="md:w-10/12 w-12/12">
                 <div class="flex shadow-lg shadow-gray-200 rounded-2xl p-4 my-8">
                     <img class="w-20 mr-4" src="images/icons/house.png" alt="">
                     <div>
@@ -203,7 +211,7 @@
 
 <!----------------- submit From  -------------->
     <footer>
-        <form class="w-4/12 m-auto bg-slate-400 p-10 rounded mb-20">
+        <form class="md:w-4/12 w-8/12 m-auto bg-slate-400 p-10 rounded mb-20">
             <input class="border px-3 py-2 block w-full mb-4 rounded" type="text" name="" placeholder="Your name "   required  id="">
             <input class="border px-3 py-2 block w-full mb-4 rounded" type="email" name="" placeholder="Your email " required id="">
             <input class="border px-3 py-2 block w-full mb-4 rounded" type="password" name="" placeholder="password" required id="">
